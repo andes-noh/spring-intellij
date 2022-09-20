@@ -19,6 +19,8 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.0'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.4.1'
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'

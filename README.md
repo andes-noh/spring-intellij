@@ -14,11 +14,16 @@ Intellij Community Springboot Project
     - build and run using: intellij
     
 - Swagger
-
     - http://localhost:8090/swagger-ui/index.html
+    
+- jar build
+    - ```gradlew build -x test```
+
+- docker
+    - 
 
 ## Reference
-    - [spring 개념 정리](https://melonicedlatte.com/2021/07/11/174700.html)
-    - [spring 시작하기](https://velog.io/@savernet/Intellij-%EB%A1%9C-Spring-boot-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0)
-    - [intellij community edition으로 스프링 부트 환경 설정](https://goodteacher.tistory.com/342)
+- [spring 개념 정리](https://melonicedlatte.com/2021/07/11/174700.html)
+- [spring 시작하기](https://velog.io/@savernet/Intellij-%EB%A1%9C-Spring-boot-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0)
+- [intellij community edition으로 스프링 부트 환경 설정](https://goodteacher.tistory.com/342)
  

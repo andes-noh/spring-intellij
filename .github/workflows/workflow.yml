@@ -7,7 +7,7 @@ on:
 
 env:
   # 이미지 이름을 환경변수로 등록합니다.
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/spring-test
+  IMAGE_NAME: andesnoh/spring-test
 
 jobs:
   build:
@@ -49,20 +49,20 @@ jobs:
         with:
           version: v0.7.0
 
-      # Container Registry에 로그인합니다.
-      - name: Login to GitHub Packages Container Registry
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.TEST }}
+#      # Container Registry에 로그인합니다.
+#      - name: Login to GitHub Packages Container Registry
+#        uses: docker/login-action@v1
+#        with:
+#          registry: ghcr.io
+#          username: ${{ github.repository_owner }}
+#          password: ${{ secrets.TEST }}
 
-      # # secrets를 이용해 Docker Hub 로그인
-      # - name: Docker Login
-      #   uses: docker/login-action@v1.10.0
-      #   with:
-      #     username: ${{ secrets.DOCKER_USERNAME }}
-      #     password: ${{ secrets.DOCKER_TOKEN }}
+       # secrets를 이용해 Docker Hub 로그인
+       - name: Docker Login
+         uses: docker/login-action@v1.10.0
+         with:
+           username: ${{ secrets.DOCKER_USERNAME }}
+           password: ${{ secrets.DOCKER_TOKEN }}
 
       # buildx 명령어로 amd64 아키텍처 이미지 빌드 및 푸쉬
       - name: Build Image

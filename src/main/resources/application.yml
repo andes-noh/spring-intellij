@@ -1,2 +1,18 @@
 server:
   port: 8090
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://"db_host":5432/"your_database"
+    username: "your_username"
+    password: "your_password"
+
+mybatis:
+  #  mapper 파일의 경로를 지정합니다. 아래 형식은 mapper 디렉토리 하위의 모든 xml 파일을 포함합니다.
+  mapper-locations: mapper/FirstDAOMapper.xml
+  configuration:
+    # db 컬럼명에서 언더바를 제거한 카멜케이스로 변경하여 리턴합니다.
+    map-underscore-to-camel-case: true
+  # @Alias를 스캔하는 경로를 설정합니다. 아래 형식은 프로젝트의 전체를 스캔합니다.
+  type-aliases-package: com.andes.intellij

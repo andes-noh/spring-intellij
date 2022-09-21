@@ -1,6 +1,7 @@
 package com.andes.intellij.controller;
 
 import com.andes.intellij.service.TestService;
+import com.andes.intellij.vo.MmbrVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/test")
@@ -18,10 +21,10 @@ public class HelloController {
     private final TestService testService;
 
     @GetMapping("/0001")
-    public ResponseEntity<String> getTest()
+    public ResponseEntity<List<MmbrVO>> getTest()
     {
-        String res = testService.helloWorld();
-        return new ResponseEntity<>(res, HttpStatus.OK);
+        List<MmbrVO> res = testService.helloWorld();
+        return new ResponseEntity<List<MmbrVO>>(res, HttpStatus.OK);
     }
 
     @GetMapping("/0002")

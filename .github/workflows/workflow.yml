@@ -33,7 +33,9 @@ jobs:
       - name: Run a multi-line script
         run: |
           ls -al
-
+          ls -al build/
+          ls -al build/lib/
+          
       # Revision를 이미지의 태그로 만들기 위해 값을 생성합니다.
       - name: Get verion
         id: image

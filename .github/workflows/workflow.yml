@@ -26,8 +26,8 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build with Gradle
-#        run: ./gradlew clean build -x test
-        run: ./gradlew build -x test
+        run: ./gradlew clean build
+#        run: ./gradlew build -x test
 
       # Revision를 이미지의 태그로 만들기 위해 값을 생성합니다.
       - name: Get verion
@@ -39,6 +39,8 @@ jobs:
       # docker buildx 설치
       - name: Docker Setup Buildx
         uses: docker/setup-buildx-action@v1
+          with:
+            version: v0.7.0
 
       # Container Registry에 로그인합니다.
       - name: Login to GitHub Packages Container Registry

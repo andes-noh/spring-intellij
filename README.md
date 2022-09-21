@@ -12,6 +12,10 @@ Intellij Community Springboot Project
     - version: 7.2 (6.7 이상)
     - jvm: java 11 (minimum)
     - build and run using: intellij
+    
+- Swagger
+
+    - http://localhost:8090/swagger-ui/index.html
 
 ## Reference
     - [spring 개념 정리](https://melonicedlatte.com/2021/07/11/174700.html)

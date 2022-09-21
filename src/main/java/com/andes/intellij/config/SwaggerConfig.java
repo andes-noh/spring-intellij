@@ -23,7 +23,7 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.any()) // Swagger를 적용 할 package를 설정한다. 여기서는 모든 RequstMapping을 설정
                 .paths(PathSelectors.any()) // 위의 API 중 특정 path에 대하여 설정한다. 여기서는 모든 path로 설정
                 .build()
-                .pathMapping("/swagger");
+                .pathMapping("/");
     }
 
     private ApiInfo apiInfo(){

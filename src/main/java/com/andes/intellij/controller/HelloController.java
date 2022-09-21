@@ -2,6 +2,9 @@ package com.andes.intellij.controller;
 
 import com.andes.intellij.service.TestService;
 import com.andes.intellij.vo.MmbrVO;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +23,11 @@ import java.util.List;
 public class HelloController {
     private final TestService testService;
 
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "ok"),
+            @ApiResponse(code = 404, message = "page not found")
+    })
+    @ApiOperation(value= "목록 조회", notes = "목록 조회 API")
     @GetMapping("/0001")
     public ResponseEntity<List<MmbrVO>> getTest()
     {

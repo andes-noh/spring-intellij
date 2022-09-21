@@ -19,6 +19,11 @@ repositories {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter
+    implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
+
     implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.0'
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.4.1'
     implementation 'org.springframework.boot:spring-boot-starter-mustache'

@@ -22,6 +22,10 @@ Intellij Community Springboot Project
 - docker
     - 
 
+## 구조
+- controller -> service(Impl) -> dao(data access object) -> mapper -> db
+
+
 ## Reference
 - [spring 개념 정리](https://melonicedlatte.com/2021/07/11/174700.html)
 - [spring 시작하기](https://velog.io/@savernet/Intellij-%EB%A1%9C-Spring-boot-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0)

@@ -4,7 +4,10 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://postgresql/test
+#    배포용 kubernetes db inner com
+#    url: jdbc:postgresql://postgresql/test
+    url: jdbc:postgresql://172.26.56.7:5432/test
+
     username: postgres
     password: klXgt38I75
 

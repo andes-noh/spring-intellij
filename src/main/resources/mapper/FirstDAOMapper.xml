@@ -11,4 +11,10 @@
     <insert id="insertUser" parameterType="com.andes.intellij.model.Insert_DB_UserInfo_Model">
         insert into mmbr (mmbr_id, mmbr_pwd, mmbr_nm, mmbr_join_dtm) values (#{mmbrId}, #{mmbrPwd}, #{mmbrNm}, #{mmbrJoinDtm})
     </insert>
+
+    <delete id="deleteUser" >
+        delete from mmbr where mmbr_id = (#{mmbrId})
+    </delete>
+
+    
 </mapper>

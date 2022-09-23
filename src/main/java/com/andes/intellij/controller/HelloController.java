@@ -1,5 +1,6 @@
 package com.andes.intellij.controller;
 
+import com.andes.intellij.model.Delete_DB_UserInfo_Model;
 import com.andes.intellij.model.Insert_DB_UserInfo_Model;
 import com.andes.intellij.model.Return_DB_Json_Model;
 import com.andes.intellij.service.TestService;
@@ -40,6 +41,17 @@ public class HelloController {
     public ResponseEntity<String> createUser(@RequestBody Insert_DB_UserInfo_Model user){
         try {
             int res = testService.insertUser(user);
+            if (res > 0) return new ResponseEntity<String>("success", HttpStatus.OK);
+            else return new ResponseEntity<String>("failed", HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("failed", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @DeleteMapping("/deleteUser")
+    public ResponseEntity<String> deleteUser(@RequestBody Delete_DB_UserInfo_Model user) {
+        try {
+            int res = testService.deleteUser(user);
             if (res > 0) return new ResponseEntity<String>("success", HttpStatus.OK);
             else return new ResponseEntity<String>("failed", HttpStatus.BAD_REQUEST);
         } catch (Exception e) {

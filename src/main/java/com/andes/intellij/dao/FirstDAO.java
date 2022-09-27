@@ -15,4 +15,6 @@ public interface FirstDAO {
     int insertUser(Insert_DB_UserInfo_Model user);
 
     int deleteUser(Delete_DB_UserInfo_Model user);
+
+    int updateUser(Insert_DB_UserInfo_Model user);
 }

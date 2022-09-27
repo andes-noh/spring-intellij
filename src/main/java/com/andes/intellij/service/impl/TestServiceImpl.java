@@ -17,7 +17,7 @@ public class TestServiceImpl implements TestService {
     private  final FirstDAO dao;
 
     @Override
-    public List<MmbrVO> helloWorld() {
+    public List<MmbrVO> listUser() {
         return dao.selectMmbrList();
     }
 
@@ -29,5 +29,10 @@ public class TestServiceImpl implements TestService {
     @Override
     public int deleteUser(Delete_DB_UserInfo_Model user) {
         return dao.deleteUser(user);
+    }
+
+    @Override
+    public int updateUser(Insert_DB_UserInfo_Model user) {
+        return dao.updateUser(user);
     }
 }

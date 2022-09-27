@@ -33,7 +33,7 @@ public class HelloController {
     @GetMapping("/0001")
     public ResponseEntity<List<MmbrVO>> getTest()
     {
-        List<MmbrVO> res = testService.helloWorld();
+        List<MmbrVO> res = testService.listUser();
         return new ResponseEntity<List<MmbrVO>>(res, HttpStatus.OK);
     }
 

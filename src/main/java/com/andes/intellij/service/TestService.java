@@ -8,7 +8,8 @@ import com.andes.intellij.vo.MmbrVO;
 import java.util.List;
 
 public interface TestService {
-    public List<MmbrVO> helloWorld();
+    public List<MmbrVO> listUser();
     public int insertUser(Insert_DB_UserInfo_Model user);
     public int deleteUser(Delete_DB_UserInfo_Model user);
+    public int updateUser(Insert_DB_UserInfo_Model user);
 }

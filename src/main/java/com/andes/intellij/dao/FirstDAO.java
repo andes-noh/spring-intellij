@@ -3,6 +3,7 @@ package com.andes.intellij.dao;
 import com.andes.intellij.model.Delete_DB_UserInfo_Model;
 import com.andes.intellij.model.Insert_DB_UserInfo_Model;
 import com.andes.intellij.model.Return_DB_Json_Model;
+import com.andes.intellij.model.Update_DB_UserInfo_Model;
 import com.andes.intellij.vo.MmbrVO;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -16,5 +17,5 @@ public interface FirstDAO {
 
     int deleteUser(Delete_DB_UserInfo_Model user);
 
-    int updateUser(Insert_DB_UserInfo_Model user);
+    int updateUser(Update_DB_UserInfo_Model user);
 }

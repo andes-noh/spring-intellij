@@ -16,5 +16,8 @@
         delete from mmbr where mmbr_id = (#{mmbrId})
     </delete>
 
-    <update id="updateUser" parameterType="com.andes.intellij.model.Insert_DB_UserInfo_Model"></update>
+    <update id="updateUser" parameterType="com.andes.intellij.model.Update_DB_UserInfo_Model">
+        update mmbr set mmbr_pwd=(#{mmbrPwd}), mmbr_nm=(#{mmbrNm})
+        where mmbr_id= (#{mmbrId})
+    </update>
 </mapper>

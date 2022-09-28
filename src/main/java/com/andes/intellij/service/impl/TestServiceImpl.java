@@ -4,6 +4,7 @@ import com.andes.intellij.dao.FirstDAO;
 import com.andes.intellij.model.Delete_DB_UserInfo_Model;
 import com.andes.intellij.model.Insert_DB_UserInfo_Model;
 import com.andes.intellij.model.Return_DB_Json_Model;
+import com.andes.intellij.model.Update_DB_UserInfo_Model;
 import com.andes.intellij.service.TestService;
 import com.andes.intellij.vo.MmbrVO;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +15,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class TestServiceImpl implements TestService {
-    private  final FirstDAO dao;
+    private final FirstDAO dao;
 
     @Override
     public List<MmbrVO> listUser() {
@@ -32,7 +33,7 @@ public class TestServiceImpl implements TestService {
     }
 
     @Override
-    public int updateUser(Insert_DB_UserInfo_Model user) {
+    public int updateUser(Update_DB_UserInfo_Model user) {
         return dao.updateUser(user);
     }
 }

@@ -20,7 +20,7 @@ Intellij Community Springboot Project
     - ```gradlew build -x test```
 
 - docker
-    - 
+    - Dockerfile
 
 ## 구조
 - controller -> service(Impl) -> dao(data access object) -> mapper -> db

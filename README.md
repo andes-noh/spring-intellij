@@ -25,6 +25,8 @@ Intellij Community Springboot Project
 ## 구조
 - controller -> service(Impl) -> dao(data access object) -> mapper -> db
 
+## CICD with jenkins
+- 업데이트 예정
 
 ## Reference
 - [spring 개념 정리](https://melonicedlatte.com/2021/07/11/174700.html)

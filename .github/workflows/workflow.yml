@@ -106,7 +106,7 @@ jobs:
           ref: main
           # 다른 저장소에 push 하려면 Personal Access Token이 필요.
           token: ${{ secrets.TEST }}
-          path: next-kustomize
+          path: spring-kustomize
       # 새 이미지 버전으로 파일 수정
       - name: Update Kubernetes resources
         run: |

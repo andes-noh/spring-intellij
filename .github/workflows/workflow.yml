@@ -110,13 +110,13 @@ jobs:
       # 새 이미지 버전으로 파일 수정
       - name: Update Kubernetes resources
         run: |
-          cd next-kustomize/overlays/main/
+          cd spring-kustomize/overlays/main/
           kustomize edit set image ${{ env.IMAGE_NAME }}:${{ steps.image.outputs.version }}
           cat kustomization.yaml
       # 수정된 파일 commit & push
       - name: Commit files
         run: |
-          cd next-kustomize
+          cd spring-kustomize
           git config --global user.email "nkj9693@gmail.com"
           git config --global user.name "andes-noh"
           git commit -am "Update image tag"
